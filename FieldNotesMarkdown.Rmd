@@ -1,0 +1,14 @@
+At the end of this section
+
+# Fields -- Basics
+
+## Aims of this section {#aims-of-this-section .unnumbered}
+
+At the end of this section you should be able to
+
+-   Describe the concept of a field
+
+-   State the link between potential and fields and calculate field
+    strength from potentials.
+
+-   Sketch electric field lines for distributions of charges.
