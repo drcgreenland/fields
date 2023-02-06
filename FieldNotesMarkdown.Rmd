@@ -12,3 +12,89 @@ At the end of this section you should be able to
     strength from potentials.
 
 -   Sketch electric field lines for distributions of charges.
+
+## What is a field?
+
+*Recommended reading:* Tipler & Mosca 4.2, 21-4
+
+A field is a region of space, where property of that space is
+characterized by either a number (a scalar field) or by three numbers (a
+vector field).
+
+The concept of a field circumvents the problem of action at a distance
+where one inanimate object is "aware\" that another has arrived.
+
+::: figurehere
+![image](Figures/blue_red_circs.png){width="80mm"}
+:::
+
+We understand that the first body sets up a field and the second body
+interacts with the first via this field. There is no need for action at
+a distance because the field of the 1st object is present in space
+whether or not the second object is there.
+
+::: figurehere
+![image](Figures/blue_red_FIELD.png){width="80mm"}
+:::
+
+### Charges
+
+Why does object 1 set up a field? Fields arise when objects have charge.
+Electric charges cause electromagnetic fields, but other fields arise
+from different types of charge for example gravitational fields arise
+from mass. (And the strong field that is responsible for holding quarks
+inside protons and neutrons arises from the colour charge -- see Inside
+The Atom.)
+
+There are two types of **electric charge**, $+$ and $-$. "Like\" charges
+repel, while "unlike\" charges attract. Electric charge is quantized:
+the **elementary charge** is $1.6021773 \times 10^{-19}$ C and is the
+charge on the electron and the proton. Charges measured in laboratories
+are always multiples of this but the quarks inside protons and neutrons
+and other hadrons have charges that fractions of this elementary charge.
+Charge is conserved in all interactions we have observed. Most everyday
+objects are electrically neutral with the number of protons and
+electrons balanced, which hides the fact that they contain enormous
+amounts of $+$ and $-$ charge. Things that we would describe as "charged
+objects\", have a small imbalance in charge.
+
+**Gravitational charge:** there is one type of gravitational charge,
+which is mass/energy. Gravitational charges attract. We don't know about
+quantization of mass. (You can probably spend many hours on the internet
+reading different opinions on this). Mass/Energy is conserved and all
+everyday objects are gravitationally charged so they all attract each
+other but gravity is very weak -- we can easily pick up bits of paper
+with an electrically charged rod when rather few electrons have been
+moved.
+
+**Strong field charge:** there are three types of fundamental strong
+charge (red, green and blue) + three anticharges. Charges attract.
+Colour is quantised and colour is conserved in interactions. All
+everyday objects are colour neutral. Colour fields are confined within
+subatomic particles i.e. to length scales of $\sim 10^{-15}$ m.
+
+## Scalar and vector fields
+
+A scalar field is characterized at each point by a single number. e.g.
+the temperature, $T$, at each position in a block of metal heated at
+some places and cooled at others.
+
+::: figurehere
+![image](Figures/isotherms.png){width="80mm"}
+:::
+
+$T$ is a function of position i.e. $T = T(x,y,z)$. At every point we can
+measure the scalar value of the temperature $T$. The black lines
+represent isotherms i.e. lines where the temperature is constant
+($T_1 < T_2 < T_3 < T_4 < T_5$). Heat flow (blue arrows) is
+perpendicular to the contours of constant temperature - the isotherms
+($T_1$, $T_2$ etc). The magnitude of the heat flow is proportional to
+the temperature gradient so that the heat flow is larger when isotherms
+are closer together.
+
+The scalar temperature field has an associated vector field because at
+any point, the heat flow is a vector, the **magnitude** and
+**direction** of which depend on position. Heat flow is therefore a
+vector field which is related to the scalar field of temperature. The
+vector gradient of the field of heat flow depends on the temperature at
+each point.
