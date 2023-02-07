@@ -1,0 +1,896 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 10 Magnetic Fields | Fields</title>
+  <meta name="description" content="This is a book." />
+  <meta name="generator" content="bookdown 0.32 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 10 Magnetic Fields | Fields" />
+  <meta property="og:type" content="book" />
+  
+  <meta property="og:description" content="This is a book." />
+  <meta name="github-repo" content="rstudio/bookdown-demo" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 10 Magnetic Fields | Fields" />
+  
+  <meta name="twitter:description" content="This is a book." />
+  
+
+<meta name="author" content="Claire Greenland" />
+
+
+<meta name="date" content="2023-02-06" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="electric-fields.html"/>
+<link rel="next" href="circuits.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">A Minimal Book Example</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> About</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#usage"><i class="fa fa-check"></i><b>1.1</b> Usage</a></li>
+<li class="chapter" data-level="1.2" data-path="index.html"><a href="index.html#render-book"><i class="fa fa-check"></i><b>1.2</b> Render book</a></li>
+<li class="chapter" data-level="1.3" data-path="index.html"><a href="index.html#preview-book"><i class="fa fa-check"></i><b>1.3</b> Preview book</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="hello-bookdown.html"><a href="hello-bookdown.html"><i class="fa fa-check"></i><b>2</b> Hello bookdown</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="hello-bookdown.html"><a href="hello-bookdown.html#a-section"><i class="fa fa-check"></i><b>2.1</b> A section</a>
+<ul>
+<li class="chapter" data-level="" data-path="hello-bookdown.html"><a href="hello-bookdown.html#an-unnumbered-section"><i class="fa fa-check"></i>An unnumbered section</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="cross.html"><a href="cross.html"><i class="fa fa-check"></i><b>3</b> Cross-references</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="cross.html"><a href="cross.html#chapters-and-sub-chapters"><i class="fa fa-check"></i><b>3.1</b> Chapters and sub-chapters</a></li>
+<li class="chapter" data-level="3.2" data-path="cross.html"><a href="cross.html#captioned-figures-and-tables"><i class="fa fa-check"></i><b>3.2</b> Captioned figures and tables</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="parts.html"><a href="parts.html"><i class="fa fa-check"></i><b>4</b> Parts</a></li>
+<li class="chapter" data-level="5" data-path="footnotes-and-citations.html"><a href="footnotes-and-citations.html"><i class="fa fa-check"></i><b>5</b> Footnotes and citations</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="footnotes-and-citations.html"><a href="footnotes-and-citations.html#footnotes"><i class="fa fa-check"></i><b>5.1</b> Footnotes</a></li>
+<li class="chapter" data-level="5.2" data-path="footnotes-and-citations.html"><a href="footnotes-and-citations.html#citations"><i class="fa fa-check"></i><b>5.2</b> Citations</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="blocks.html"><a href="blocks.html"><i class="fa fa-check"></i><b>6</b> Blocks</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="blocks.html"><a href="blocks.html#equations"><i class="fa fa-check"></i><b>6.1</b> Equations</a></li>
+<li class="chapter" data-level="6.2" data-path="blocks.html"><a href="blocks.html#theorems-and-proofs"><i class="fa fa-check"></i><b>6.2</b> Theorems and proofs</a></li>
+<li class="chapter" data-level="6.3" data-path="blocks.html"><a href="blocks.html#callout-blocks"><i class="fa fa-check"></i><b>6.3</b> Callout blocks</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="sharing-your-book.html"><a href="sharing-your-book.html"><i class="fa fa-check"></i><b>7</b> Sharing your book</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="sharing-your-book.html"><a href="sharing-your-book.html#publishing"><i class="fa fa-check"></i><b>7.1</b> Publishing</a></li>
+<li class="chapter" data-level="7.2" data-path="sharing-your-book.html"><a href="sharing-your-book.html#pages"><i class="fa fa-check"></i><b>7.2</b> 404 pages</a></li>
+<li class="chapter" data-level="7.3" data-path="sharing-your-book.html"><a href="sharing-your-book.html#metadata-for-sharing"><i class="fa fa-check"></i><b>7.3</b> Metadata for sharing</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
+<li class="chapter" data-level="8" data-path="fields-basics.html"><a href="fields-basics.html"><i class="fa fa-check"></i><b>8</b> Fields – Basics</a>
+<ul>
+<li class="chapter" data-level="" data-path="fields-basics.html"><a href="fields-basics.html#aims-of-this-section"><i class="fa fa-check"></i>Aims of this section</a></li>
+<li class="chapter" data-level="8.1" data-path="fields-basics.html"><a href="fields-basics.html#what-is-a-field"><i class="fa fa-check"></i><b>8.1</b> What is a field?</a>
+<ul>
+<li class="chapter" data-level="8.1.1" data-path="fields-basics.html"><a href="fields-basics.html#charges"><i class="fa fa-check"></i><b>8.1.1</b> Charges</a></li>
+</ul></li>
+<li class="chapter" data-level="8.2" data-path="fields-basics.html"><a href="fields-basics.html#scalar-and-vector-fields"><i class="fa fa-check"></i><b>8.2</b> Scalar and vector fields</a></li>
+<li class="chapter" data-level="8.3" data-path="fields-basics.html"><a href="fields-basics.html#link-between-scalar-and-vector-field"><i class="fa fa-check"></i><b>8.3</b> Link between scalar and vector field</a>
+<ul>
+<li class="chapter" data-level="8.3.1" data-path="fields-basics.html"><a href="fields-basics.html#other-operations-on-vectors"><i class="fa fa-check"></i><b>8.3.1</b> Other operations on vectors</a></li>
+</ul></li>
+<li class="chapter" data-level="8.4" data-path="fields-basics.html"><a href="fields-basics.html#representing-the-electric-field"><i class="fa fa-check"></i><b>8.4</b> Representing the electric field</a></li>
+<li class="chapter" data-level="8.5" data-path="fields-basics.html"><a href="fields-basics.html#equipotential-surfaces"><i class="fa fa-check"></i><b>8.5</b> Equipotential surfaces</a></li>
+<li class="chapter" data-level="8.6" data-path="fields-basics.html"><a href="fields-basics.html#summary"><i class="fa fa-check"></i><b>8.6</b> Summary</a></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="electric-fields.html"><a href="electric-fields.html"><i class="fa fa-check"></i><b>9</b> Electric Fields</a>
+<ul>
+<li class="chapter" data-level="9.1" data-path="electric-fields.html"><a href="electric-fields.html#coulombs-law"><i class="fa fa-check"></i><b>9.1</b> Coulomb’s Law</a></li>
+<li class="chapter" data-level="9.2" data-path="electric-fields.html"><a href="electric-fields.html#the-electric-field"><i class="fa fa-check"></i><b>9.2</b> The electric field</a></li>
+<li class="chapter" data-level="9.3" data-path="electric-fields.html"><a href="electric-fields.html#principle-of-superposition"><i class="fa fa-check"></i><b>9.3</b> Principle of superposition</a></li>
+<li class="chapter" data-level="9.4" data-path="electric-fields.html"><a href="electric-fields.html#electric-dipole-field"><i class="fa fa-check"></i><b>9.4</b> Electric dipole field</a>
+<ul>
+<li class="chapter" data-level="9.4.1" data-path="electric-fields.html"><a href="electric-fields.html#electric-dipole-moment"><i class="fa fa-check"></i><b>9.4.1</b> Electric dipole moment</a></li>
+<li class="chapter" data-level="9.4.2" data-path="electric-fields.html"><a href="electric-fields.html#dipoles-in-external-electric-fields"><i class="fa fa-check"></i><b>9.4.2</b> Dipoles in external electric fields</a></li>
+</ul></li>
+<li class="chapter" data-level="9.5" data-path="electric-fields.html"><a href="electric-fields.html#continuous-charge-distributions"><i class="fa fa-check"></i><b>9.5</b> Continuous charge distributions</a></li>
+<li class="chapter" data-level="9.6" data-path="electric-fields.html"><a href="electric-fields.html#electric-flux-gausss-law"><i class="fa fa-check"></i><b>9.6</b> Electric flux &amp; Gauss’s Law</a></li>
+<li class="chapter" data-level="9.7" data-path="electric-fields.html"><a href="electric-fields.html#gausss-law"><i class="fa fa-check"></i><b>9.7</b> Gauss’s Law</a>
+<ul>
+<li class="chapter" data-level="9.7.1" data-path="electric-fields.html"><a href="electric-fields.html#field-inside-a-hollow-object"><i class="fa fa-check"></i><b>9.7.1</b> Field inside a hollow object</a></li>
+</ul></li>
+<li class="chapter" data-level="9.8" data-path="electric-fields.html"><a href="electric-fields.html#electric-potential"><i class="fa fa-check"></i><b>9.8</b> Electric potential</a></li>
+</ul></li>
+<li class="chapter" data-level="10" data-path="magnetic-fields.html"><a href="magnetic-fields.html"><i class="fa fa-check"></i><b>10</b> Magnetic Fields</a>
+<ul>
+<li class="chapter" data-level="10.1" data-path="magnetic-fields.html"><a href="magnetic-fields.html#the-magnetic-field"><i class="fa fa-check"></i><b>10.1</b> The magnetic field</a></li>
+<li class="chapter" data-level="10.2" data-path="magnetic-fields.html"><a href="magnetic-fields.html#forces-from-magnetic-fields"><i class="fa fa-check"></i><b>10.2</b> Forces from Magnetic Fields</a>
+<ul>
+<li class="chapter" data-level="10.2.1" data-path="magnetic-fields.html"><a href="magnetic-fields.html#jj-thomsons-measurement-of-em"><i class="fa fa-check"></i><b>10.2.1</b> JJ Thomson’s measurement of <span class="math inline">\(e/m\)</span></a></li>
+<li class="chapter" data-level="10.2.2" data-path="magnetic-fields.html"><a href="magnetic-fields.html#circulating-charges"><i class="fa fa-check"></i><b>10.2.2</b> Circulating charges</a></li>
+<li class="chapter" data-level="10.2.3" data-path="magnetic-fields.html"><a href="magnetic-fields.html#magnetic-force-on-a-wire"><i class="fa fa-check"></i><b>10.2.3</b> Magnetic force on a wire</a></li>
+<li class="chapter" data-level="10.2.4" data-path="magnetic-fields.html"><a href="magnetic-fields.html#force-on-current-loops-motors"><i class="fa fa-check"></i><b>10.2.4</b> Force on current loops &amp; motors</a></li>
+<li class="chapter" data-level="10.2.5" data-path="magnetic-fields.html"><a href="magnetic-fields.html#torque-on-a-coil"><i class="fa fa-check"></i><b>10.2.5</b> Torque on a coil</a></li>
+</ul></li>
+<li class="chapter" data-level="10.3" data-path="magnetic-fields.html"><a href="magnetic-fields.html#the-biot-savart-law"><i class="fa fa-check"></i><b>10.3</b> The Biot-Savart Law</a></li>
+<li class="chapter" data-level="10.4" data-path="magnetic-fields.html"><a href="magnetic-fields.html#ampères-law"><i class="fa fa-check"></i><b>10.4</b> Ampère’s Law</a>
+<ul>
+<li class="chapter" data-level="10.4.1" data-path="magnetic-fields.html"><a href="magnetic-fields.html#example-magnetic-field-of-a-wire"><i class="fa fa-check"></i><b>10.4.1</b> Example: Magnetic field of a wire</a></li>
+<li class="chapter" data-level="10.4.2" data-path="magnetic-fields.html"><a href="magnetic-fields.html#example-magnetic-field-of-a-solenoid"><i class="fa fa-check"></i><b>10.4.2</b> Example: Magnetic field of a solenoid</a></li>
+</ul></li>
+<li class="chapter" data-level="10.5" data-path="magnetic-fields.html"><a href="magnetic-fields.html#faradays-law-of-induction"><i class="fa fa-check"></i><b>10.5</b> Faraday’s Law of induction</a>
+<ul>
+<li class="chapter" data-level="10.5.1" data-path="magnetic-fields.html"><a href="magnetic-fields.html#transformers"><i class="fa fa-check"></i><b>10.5.1</b> Transformers</a></li>
+<li class="chapter" data-level="10.5.2" data-path="magnetic-fields.html"><a href="magnetic-fields.html#dynamo"><i class="fa fa-check"></i><b>10.5.2</b> Dynamo</a></li>
+<li class="chapter" data-level="10.5.3" data-path="magnetic-fields.html"><a href="magnetic-fields.html#the-moving-coil-microphone"><i class="fa fa-check"></i><b>10.5.3</b> The moving coil microphone</a></li>
+<li class="chapter" data-level="10.5.4" data-path="magnetic-fields.html"><a href="magnetic-fields.html#sec:eddy"><i class="fa fa-check"></i><b>10.5.4</b> Eddy current heating</a></li>
+</ul></li>
+<li class="chapter" data-level="10.6" data-path="magnetic-fields.html"><a href="magnetic-fields.html#lenzs-law"><i class="fa fa-check"></i><b>10.6</b> Lenz’s Law</a></li>
+<li class="chapter" data-level="10.7" data-path="magnetic-fields.html"><a href="magnetic-fields.html#inductance"><i class="fa fa-check"></i><b>10.7</b> Inductance</a></li>
+</ul></li>
+<li class="chapter" data-level="11" data-path="circuits.html"><a href="circuits.html"><i class="fa fa-check"></i><b>11</b> Circuits</a>
+<ul>
+<li class="chapter" data-level="" data-path="circuits.html"><a href="circuits.html#aims-of-this-section-1"><i class="fa fa-check"></i>Aims of this section</a></li>
+<li class="chapter" data-level="" data-path="circuits.html"><a href="circuits.html#assumed-knowledge"><i class="fa fa-check"></i>Assumed knowledge</a></li>
+<li class="chapter" data-level="11.1" data-path="circuits.html"><a href="circuits.html#components-in-circuits"><i class="fa fa-check"></i><b>11.1</b> Components in circuits</a>
+<ul>
+<li class="chapter" data-level="11.1.1" data-path="circuits.html"><a href="circuits.html#resistors"><i class="fa fa-check"></i><b>11.1.1</b> Resistors</a></li>
+<li class="chapter" data-level="11.1.2" data-path="circuits.html"><a href="circuits.html#capacitors"><i class="fa fa-check"></i><b>11.1.2</b> Capacitors</a></li>
+<li class="chapter" data-level="11.1.3" data-path="circuits.html"><a href="circuits.html#inductors"><i class="fa fa-check"></i><b>11.1.3</b> Inductors</a></li>
+</ul></li>
+<li class="chapter" data-level="11.2" data-path="circuits.html"><a href="circuits.html#kirchhoffs-rules"><i class="fa fa-check"></i><b>11.2</b> Kirchhoff’s Rules</a>
+<ul>
+<li class="chapter" data-level="11.2.1" data-path="circuits.html"><a href="circuits.html#the-loop-rule"><i class="fa fa-check"></i><b>11.2.1</b> The loop rule</a></li>
+<li class="chapter" data-level="11.2.2" data-path="circuits.html"><a href="circuits.html#the-junction-rule"><i class="fa fa-check"></i><b>11.2.2</b> The junction rule</a></li>
+</ul></li>
+<li class="chapter" data-level="11.3" data-path="circuits.html"><a href="circuits.html#capacitors-in-dc-circuits"><i class="fa fa-check"></i><b>11.3</b> Capacitors in DC circuits</a>
+<ul>
+<li class="chapter" data-level="" data-path="circuits.html"><a href="circuits.html#example-series-rc-circuit"><i class="fa fa-check"></i>Example: Series RC circuit</a></li>
+</ul></li>
+<li class="chapter" data-level="11.4" data-path="circuits.html"><a href="circuits.html#inductors-in-dc-circuits"><i class="fa fa-check"></i><b>11.4</b> Inductors in DC circuits</a></li>
+<li class="chapter" data-level="11.5" data-path="circuits.html"><a href="circuits.html#oscillations-in-lc-and-lcr-circuits"><i class="fa fa-check"></i><b>11.5</b> Oscillations in LC and LCR circuits</a>
+<ul>
+<li class="chapter" data-level="" data-path="circuits.html"><a href="circuits.html#example-lc-circuit"><i class="fa fa-check"></i>Example: LC circuit</a></li>
+</ul></li>
+<li class="chapter" data-level="11.6" data-path="circuits.html"><a href="circuits.html#complex-electrical-impedance"><i class="fa fa-check"></i><b>11.6</b> Complex electrical impedance</a></li>
+<li class="chapter" data-level="11.7" data-path="circuits.html"><a href="circuits.html#combining-complex-impedances"><i class="fa fa-check"></i><b>11.7</b> Combining complex impedances</a>
+<ul>
+<li class="chapter" data-level="" data-path="circuits.html"><a href="circuits.html#phase-of-current-at-resonance"><i class="fa fa-check"></i>Phase of current at resonance</a></li>
+</ul></li>
+<li class="chapter" data-level="11.8" data-path="circuits.html"><a href="circuits.html#energy-in-lcr-circuits"><i class="fa fa-check"></i><b>11.8</b> Energy in LCR circuits</a>
+<ul>
+<li class="chapter" data-level="11.8.1" data-path="circuits.html"><a href="circuits.html#energy-stored-in-an-inductor"><i class="fa fa-check"></i><b>11.8.1</b> Energy stored in an inductor</a></li>
+<li class="chapter" data-level="11.8.2" data-path="circuits.html"><a href="circuits.html#energy-stored-in-a-capacitor"><i class="fa fa-check"></i><b>11.8.2</b> Energy stored in a capacitor</a></li>
+</ul></li>
+<li class="chapter" data-level="11.9" data-path="circuits.html"><a href="circuits.html#summary-1"><i class="fa fa-check"></i><b>11.9</b> Summary</a></li>
+</ul></li>
+<li class="chapter" data-level="12" data-path="sec:Sols.html"><a href="sec:Sols.html"><i class="fa fa-check"></i><b>12</b> Exercise solutions</a>
+<ul>
+<li class="chapter" data-level="" data-path="sec:Sols.html"><a href="sec:Sols.html#ex1Sol"><i class="fa fa-check"></i>Exercise solution</a></li>
+<li class="chapter" data-level="" data-path="sec:Sols.html"><a href="sec:Sols.html#ringExSol"><i class="fa fa-check"></i>Exercise solution</a></li>
+<li class="chapter" data-level="" data-path="sec:Sols.html"><a href="sec:Sols.html#ringEx2Sol"><i class="fa fa-check"></i>Exercise solution</a></li>
+<li class="chapter" data-level="" data-path="sec:Sols.html"><a href="sec:Sols.html#GaussLineExSol"><i class="fa fa-check"></i>Exercise solution</a></li>
+<li class="chapter" data-level="" data-path="sec:Sols.html"><a href="sec:Sols.html#cyclotronExSol"><i class="fa fa-check"></i>Exercise solution</a></li>
+<li class="chapter" data-level="" data-path="sec:Sols.html"><a href="sec:Sols.html#Kirchoff_ExSol"><i class="fa fa-check"></i>Exercise solution</a></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Fields</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="magnetic-fields" class="section level1 hasAnchor" number="10">
+<h1><span class="header-section-number">Chapter 10</span> Magnetic Fields<a href="magnetic-fields.html#magnetic-fields" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="the-magnetic-field" class="section level2 hasAnchor" number="10.1">
+<h2><span class="header-section-number">10.1</span> The magnetic field<a href="magnetic-fields.html#the-magnetic-field" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p><em>Recommended reading:</em> Tipler &amp; Mosca 26</p>
+<p>In electrostatics, we viewed electric charges as interacting via the
+electric field to avoid action at a distance. The field surrounds any
+charge and when a second charge is brought near to the first it
+interacts with the field that is already present.</p>
+<p>Can we think of “magnetic charges" interacting via the magnetic field,
+<span class="math inline">\(\B\)</span>? <strong>No.</strong> This is because magnetic charges have not been found to
+exist - there is no evidence for single North or South poles. Searches
+have been made for magnetic monopoles, but without any success, although
+their existence has not been entirely ruled out. (This is way beyond our
+syllabus but if you are interested you could try looking at
+<a href="https://royalsocietypublishing.org/doi/10.1098/rsta.2018.0328" class="uri">https://royalsocietypublishing.org/doi/10.1098/rsta.2018.0328</a>.)</p>
+<p>The magnetic field is produced by <em>moving</em> electric charges (i.e.
+electric currents). As with the electric field, the magnetic field can
+be represented using field lines and the density of field lines
+represents the strength of the field and the direction is that in which
+a north pole would move.</p>
+<p>The magnetic field <span class="math inline">\(\B\)</span> is measured in the SI unit of Tesla or in Gauss:
+1 Tesla = <span class="math inline">\(10^4\)</span> Gauss =
+<span class="math inline">\(\frac{\mathrm{Ns}}{\mathrm{Cm}} = \frac{\mathrm{N}}{\mathrm{Am}}\)</span>.</p>
+<p>There are some important differences between the behaviour of charges in
+electric and magnetic fields. In electric fields, the force on a charge
+is parallel to the field lines – a positive charge moves along the
+field lines in the direction indicated. In magnetic fields, the force on
+a <em>moving</em> charge is perpendicular to the field lines.</p>
+<div class="figurehere">
+<div class="float">
+<img src="Figures/MagFields.png" style="width:120mm" alt="image" />
+<div class="figcaption">image</div>
+</div>
+</div>
+<p>Magnetic field lines always form closed loops whereas electric field
+lines begin and end on charges. This means that a version of Gauss’ Law
+for magnetism states <span class="math inline">\(\Phi_B = \oiint \B \cdot \d\s = 0\)</span> (see Tipler &amp;
+Mosca, 27-3). As field lines are closed all field lines entering a
+closed surface must leave it as well. So net magnetic flux through the
+surface is zero.</p>
+<p>The direction of the magnetic field direction due to an electric current
+is given by the right-hand rule. If you point the thumb of your right
+hand in the direction of the current and then curl the fingers the field
+is in the direction of the curl of your fingers.</p>
+</div>
+<div id="forces-from-magnetic-fields" class="section level2 hasAnchor" number="10.2">
+<h2><span class="header-section-number">10.2</span> Forces from Magnetic Fields<a href="magnetic-fields.html#forces-from-magnetic-fields" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p><em>Recommended reading:</em> Tipler &amp; Mosca 26-2</p>
+<p>The Lorentz force describes the force felt by a moving charge in a
+combination of electric and magnetic fields.</p>
+<p><span class="math display">\[\F = q(\E + \v \times \B)\]</span></p>
+<p>The cross product tells us that force due to the magnetic field <span class="math inline">\(\B\)</span> is
+perpendicular to the magnetic field and the velocity of a charged
+particle (<span class="math inline">\(\v\)</span>) and therefore when the velocity and magnetic field are
+parallel (or antiparallel) to each other, the force on the charged
+particle due to the magnetic field is zero. Since the magnetic force, is
+always perpendicular to the velocity vector of the particle it cannot do
+any work on the charge and therefore cannot change the energy and speed
+of the particle.</p>
+<div class="figurehere">
+<div class="float">
+<img src="Figures/bubble_chamber.jpg" style="width:80mm" alt="image" />
+<div class="figcaption">image</div>
+</div>
+</div>
+<p>The artistically enhanced image in was produced by the Big European
+Bubble Chamber (BEBC), which started up at CERN in 1973. Charged
+particles passing through a chamber filled with hydrogen-neon liquid
+leave bubbles along their paths (Image: BEBC). You can see the spiral
+paths of the charged particles as they move in circles under the
+influence of the magnetic field but lose energy through collisions with
+the Hydrogen-neon atoms.</p>
+<div id="jj-thomsons-measurement-of-em" class="section level3 hasAnchor" number="10.2.1">
+<h3><span class="header-section-number">10.2.1</span> JJ Thomson’s measurement of <span class="math inline">\(e/m\)</span><a href="magnetic-fields.html#jj-thomsons-measurement-of-em" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>As seen in the previous exercise, the electric and magnetic forces on a
+charged particle are equal if <span class="math inline">\(E = vB\)</span>, i.e. when the speed of the
+particle is given by <span class="math inline">\(E/B\)</span>. This condition doesn’t depend on the mass or
+the charge of the object. JJ Thomson used this to make a measurement of
+<span class="math inline">\(e/m\)</span> for the “cathode rays" demonstrating that these rays consisted of
+particles. The principle of the experiment is to apply crossed electric
+and magnetic fields, that is electric and magnetic fields at right
+angles to each other. First the deflection in the <span class="math inline">\(E\)</span> field only is
+measured. In this case the force depends on charge and the deflection on
+mass and <span class="math inline">\(v\)</span>. A magnetic field is that applied to give an overall
+deflection of zero. At this point the forces due to <span class="math inline">\(\E\)</span> and <span class="math inline">\(\B\)</span> are
+balanced and the velocity of the particle is therefore measured and can
+be used with the 1st result, for the <span class="math inline">\(E\)</span> field only, to calculate the
+charge/mass ratio.</p>
+</div>
+<div id="circulating-charges" class="section level3 hasAnchor" number="10.2.2">
+<h3><span class="header-section-number">10.2.2</span> Circulating charges<a href="magnetic-fields.html#circulating-charges" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p><em>Recommended reading:</em> Tipler &amp; Mosca 26-2</p>
+<div class="figurehere">
+<div class="float">
+<img src="Figures/circular_path.png" style="width:80mm" alt="image" />
+<div class="figcaption">image</div>
+</div>
+</div>
+<p>If <span class="math inline">\(\B\)</span> and <span class="math inline">\(\v\)</span> are perpendicular, a particle moving in a constant <span class="math inline">\(\B\)</span>
+field is forced to move in a circle by the (centripetal) magnetic force.
+Note that if there is a component of <span class="math inline">\(v\)</span> in the same direction as <span class="math inline">\(\B\)</span>
+there is no force in this direction and that component of the velocity
+is unchanged in direction or magnitude causing the particle to move in a
+spiral. The frequency of rotation around the circle is the cyclotron
+frequency. This frequency does not depend on the particle velocity or
+the radius of the circle.</p>
+<div class="flushleft">
+
+</div>
+<p>Charged particles will tend to spiral along field lines. By shaping the
+magnetic field lines as shown in , it is possible to confine charged
+particles inside a “magnetic bottle".</p>
+<div class="figurehere">
+<div class="float">
+<img src="Figures/magBottle.png" style="width:80mm" alt="image" />
+<div class="figcaption">image</div>
+</div>
+</div>
+<p>Charged particles are also confined along the Earth’s field lines. This
+protects us from cosmic radiation and is also responsible for the
+northern and southern lights.</p>
+</div>
+<div id="magnetic-force-on-a-wire" class="section level3 hasAnchor" number="10.2.3">
+<h3><span class="header-section-number">10.2.3</span> Magnetic force on a wire<a href="magnetic-fields.html#magnetic-force-on-a-wire" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>We can use the expression for the force on a single charge due to a
+magnetic field to calculate the force on a length of wire carrying a
+current. This arguments is describe below but you can also look at the
+derivation in Tipler &amp; Mosca (26-1).</p>
+<p>The expression for the force on a moving charge in a current carrying
+conductor in a magnetic field is <span class="math inline">\(\F = q\v_d \times \B\)</span> (where <span class="math inline">\(\v_d\)</span> is
+the drift velocity for the charge carriers). The current is the rate at
+which charge passes any point on the wire and this is just <span class="math inline">\(nqv_d\)</span> where
+<span class="math inline">\(n\)</span> is the number of charge carriers per unit length. Note that if the
+carriers are positive then the vector <span class="math inline">\(qv_d\)</span> points in the direction of
+conventional current flow. If <span class="math inline">\(q\)</span> is negative <span class="math inline">\(v_d\)</span> points in a
+direction opposite to conventional current flow but the combination
+<span class="math inline">\(qv_d\)</span> points in the direction of conventional current flow. The force
+per unit length on the wire is <span class="math inline">\(nq \v_d \times \B\)</span> and the force on a
+length <span class="math inline">\(L\)</span> of wire is <span class="math inline">\(Lnq \v_d \times \B\)</span>. We define <span class="math inline">\(\L\)</span> as the vector
+length of the wire i.e. a vector with length equal to the length of the
+wire and in the direction of the flow of conventional current. <span class="math inline">\(\L\)</span>
+therefore points in the direction of <span class="math inline">\(q \v_d\)</span> so <span class="math inline">\(\L \times \B\)</span> is in
+the direction of the force on the wire and, since <span class="math inline">\(I = nq v_d\)</span>, the
+force is given by <span class="math inline">\(\F = I \L \times \B\)</span>.</p>
+</div>
+<div id="force-on-current-loops-motors" class="section level3 hasAnchor" number="10.2.4">
+<h3><span class="header-section-number">10.2.4</span> Force on current loops &amp; motors<a href="magnetic-fields.html#force-on-current-loops-motors" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p><em>Recommended reading:</em> Tipler &amp; Mosca 26-3</p>
+<p>The force on a current carrying conductor in a magnetic field
+<span class="math inline">\(\F = I \L \times \B\)</span> can be used to make a motor. The principle of
+operation of a motor made of a single loop of wire is shown nicely in
+<a href="http://www.walter-fendt.de/html5/phen/electricmotor_en.htm" class="uri">http://www.walter-fendt.de/html5/phen/electricmotor_en.htm</a>.</p>
+<div class="figurehere">
+<div class="center">
+<div class="float">
+<img src="Figures/motor_pics.png" style="width:120mm" alt="image" />
+<div class="figcaption">image</div>
+</div>
+</div>
+</div>
+<p>The length of the coil as viewed in <strong>a)</strong> is <span class="math inline">\(b\)</span>. The current at the
+top of the loop as viewed from positive <span class="math inline">\(z\)</span> is flowing down the page to
+the right. Using the right-hand rule to work out the direction of
+<span class="math inline">\(\L \times \B\)</span> gives a force in the positive <span class="math inline">\(z\)</span>-direction. This will be
+balanced by the force from the other end of the loop (where the current
+flows in the opposite direction. These sides do not produce a torque. In
+<strong>a)</strong>, the sides of length <span class="math inline">\(a\)</span> are directed into the page. At the lower
+end of <strong>a)</strong>, the current flows into the page in the negative
+<span class="math inline">\(z\)</span>-direction so <span class="math inline">\(\L\)</span> is in the negative <span class="math inline">\(z\)</span>-direction and the field
+<span class="math inline">\(\B\)</span> is in the positive <span class="math inline">\(x\)</span>-direction. Since
+<span class="math inline">\(-\hat{\k} \times \hat{\i} = \hat{\i}\)</span>, the force on that side is
+therefore in the negative <span class="math inline">\(y\)</span>-direction. On the other side of the loop
+the current is reversed but not the field so that the force is in the
+opposite direction. The magnitude of the force is the length of the
+side, <span class="math inline">\(a\)</span>, multiplied by the current and the magnitude of the magnetic
+field. To calculate the torque now needs the perpendicular distance from
+the point the force acts to the centre of the loop: this is
+<span class="math inline">\(\frac{b}{2}\sin\theta\)</span>. The torque about the <span class="math inline">\(z\)</span>-axis due to one side
+of the loop is <span class="math inline">\(\frac{BIab}{2} \sin \theta\)</span>. Since there are two sides
+contributing to the torque the final answer is
+<span class="math inline">\(\Gamma = BIab \sin\theta\)</span>. Note that this depends on the area of the
+loop, <span class="math inline">\(ab\)</span>.</p>
+</div>
+<div id="torque-on-a-coil" class="section level3 hasAnchor" number="10.2.5">
+<h3><span class="header-section-number">10.2.5</span> Torque on a coil<a href="magnetic-fields.html#torque-on-a-coil" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>For a single loop the torque is <span class="math inline">\(\Gamma = BIab \sin\theta\)</span>, noting that
+<span class="math inline">\(ab\)</span> is the area of the loop. If instead of a single loop there is a
+coil with <span class="math inline">\(N\)</span> loops then the torque is simply multiplied by <span class="math inline">\(N\)</span>, hence
+<span class="math inline">\(\Gamma = NBIab \sin\theta\)</span>. By analogy with the electric dipole, we can
+define a magnetic dipole moment <span class="math inline">\(\boldsymbol{\mu} = IA \hat{\n}\)</span>, where
+<span class="math inline">\(\hat{\n}\)</span> is a unit vector in the direction normal to the area <span class="math inline">\(A\)</span>. So
+we can express the torque as <span class="math inline">\(\Gamma = \boldsymbol{\mu} \times \B\)</span>.</p>
+</div>
+</div>
+<div id="the-biot-savart-law" class="section level2 hasAnchor" number="10.3">
+<h2><span class="header-section-number">10.3</span> The Biot-Savart Law<a href="magnetic-fields.html#the-biot-savart-law" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p><em>Recommended reading:</em> Tipler &amp; Mosca 27-1, 27-2</p>
+<p>We can generalize our previous result for the force on a current
+<span class="math inline">\(F = IL \times B\)</span> by considering a small element of current
+<span class="math inline">\(dF = I \d s \times B\)</span> and then calculate the field due to a sum of
+current elements where these do not necessarily lie on a straight line
+or other simple shape. The magnetic field could have been produced by
+another current which give us interactions between currents.</p>
+<div class="figurehere">
+<div class="center">
+<div class="float">
+<img src="Figures/fieldmovingcharge.png" style="width:100mm" alt="image" />
+<div class="figcaption">image</div>
+</div>
+</div>
+</div>
+<p>A point charge, <span class="math inline">\(q\)</span> ,moving with velocity, <span class="math inline">\(v\)</span>, produces a magnetic
+field <span class="math inline">\(B\)</span> at a distance <span class="math inline">\(r\)</span> in a direction given by
+<span class="math inline">\(\v \times \hat{\r}\)</span>, where <span class="math inline">\(\hat{\r}\)</span> points from <span class="math inline">\(q\)</span> to the point
+where the field is measured.</p>
+<p><span class="math display">\[\begin{aligned}
+\B = \frac{\mu_0}{4\pi} q \v \times \frac{\hat{\r}}{r^2}
+\end{aligned}\]</span></p>
+<p>The magnetic field at point <span class="math inline">\(P\)</span> due to the current element <span class="math inline">\(I \d\s\)</span> is
+therefore <span class="math display">\[\begin{aligned}
+\d \B = \mu_0/4\pi  I \d\s \times \r /r^2
+\end{aligned}\]</span></p>
+<p>or, in terms of the magnitudes, <span class="math display">\[\begin{aligned}
+\d \B = \frac{\mu_0}{4\pi}  \frac{I \d s  \sin\theta}{r^2}
+\end{aligned}\]</span></p>
+<p>This is the <strong>Biot-Savart Law</strong>, which is analogous to Coulomb’s Law for
+evaluating the electric field due to a point charge. The Biot-Savart Law
+can be used to calculate the field due to a set of conductors.  </p>
+</div>
+<div id="ampères-law" class="section level2 hasAnchor" number="10.4">
+<h2><span class="header-section-number">10.4</span> Ampère’s Law<a href="magnetic-fields.html#ampères-law" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p><em>Recommended reading:</em> Tipler &amp; Mosca 27-4</p>
+<p>Ampère’s Law states that the sum (or integral) of the product
+<span class="math inline">\(\B \cdot \d\s\)</span> around a closed loop is equal to the total current
+flowing through the surface enclosed by the loop multiplied by the
+permeability of free space, <span class="math inline">\(\mu_0\)</span>. Mathematically, <span class="math display">\[\begin{aligned}
+\oint \B \cdot \d \s = \mu_0 I
+\end{aligned}\]</span></p>
+<p>where <span class="math inline">\(\d\s\)</span> is a vector that points along the tangent to the loop with
+a magnitude equal to a small length of the curve.</p>
+<p>To use Ampère’s law we construct an imaginary Ampèrian loop around some
+current carrying conductors. (Compare this to constructing a Gaussian
+surface around charges to determine the electric flux and hence the
+field.) In this case the loop is arranged so it is parallel to or
+perpendicular to the magnetic field so <span class="math inline">\(\B \cdot \d\s =|\B||\d\s|\)</span> or
+<span class="math inline">\(\B\cdot \d\s = 0\)</span> respectively.</p>
+<p>We will solve symmetric problems in this way as there are limitations to
+Ampère’s law (discussed in Tipler &amp; Mosca 27-4). We evaluate the line
+integral of <span class="math inline">\(\B\)</span> around the loop which is equal to the sum of the
+current flowing through the loop. (Compare with Gauss’s Law where the
+integral of <span class="math inline">\(\E\)</span> over a surface was equal to the charge enclosed by the
+surface.)</p>
+<p>We’ll consider a couple of classic examples of using Ampère’s Law:</p>
+<ul>
+<li><p>A single wire carrying current</p></li>
+<li><p>The magnetic field of a solenoid</p></li>
+</ul>
+<div id="example-magnetic-field-of-a-wire" class="section level3 hasAnchor" number="10.4.1">
+<h3><span class="header-section-number">10.4.1</span> Example: Magnetic field of a wire<a href="magnetic-fields.html#example-magnetic-field-of-a-wire" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Consider the field outside a single wire carrying current and determine
+the field at a distance <span class="math inline">\(R\)</span> from the wire. From the symmetry of the
+problem the field lines are circular about the wire and the field has a
+constant magnitude at a constant distance from the wire. So we pick a
+loop that is also circular. The magnitude of <span class="math inline">\(\B\)</span> is constant along the
+loop and the loop is always parallel to <span class="math inline">\(\B\)</span>.</p>
+<div class="figurehere">
+<div class="center">
+<div class="float">
+<img src="Figures/wireField.png" style="width:50mm" alt="image" />
+<div class="figcaption">image</div>
+</div>
+</div>
+</div>
+<p>Ampère’s Law states <span class="math inline">\(\oint \B \cdot \d\s = \mu_0 I\)</span>. If we perform the
+integral in the clockwise direction then the element of the path <span class="math inline">\(\d\s\)</span>
+is parallel to B and so the integral is the magnitude of B multiplied by
+the magnitude of ds integrated around the path. This is simply the
+length of the path times the magnitude of <span class="math inline">\(\B\)</span>:</p>
+<p><span class="math display">\[\begin{aligned}
+\oint \B \cdot \d\s = B \times 2\pi r = \mu_0 I
+\end{aligned}\]</span></p>
+<p>Rearranging gives <span class="math display">\[B = \frac{\mu_0 I}{2\pi R}\]</span></p>
+<p>as for Biot-Savart Law – as we would expect.</p>
+</div>
+<div id="example-magnetic-field-of-a-solenoid" class="section level3 hasAnchor" number="10.4.2">
+<h3><span class="header-section-number">10.4.2</span> Example: Magnetic field of a solenoid<a href="magnetic-fields.html#example-magnetic-field-of-a-solenoid" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>A solenoid is a wire wound in a long straight helix with the length
+usually much longer than the diameter. It looks like a set of coils next
+to each other and the overall field is the same as a for a bar magnet of
+the same shape.</p>
+<div class="figurehere">
+<div class="center">
+<div class="float">
+<img src="Figures/loopNsolenoid.png" style="width:120mm" alt="image" />
+<div class="figcaption">image</div>
+</div>
+</div>
+</div>
+<p>In this example we calculate the magnetic field of a long solenoid with
+<span class="math inline">\(n\)</span> turns per unit length. As the length tends to infinity, the field
+outside tends to zero and the field inside becomes increasingly uniform
+and parallel to the axis. We need to find a suitable Ampèrian loop ().
+In this case we pick a rectangular loop where one side (a-b) lies within
+the solenoid and is parallel to the field. One side (c-d) is outside the
+solenoid where the field is 0. And the two remaining sides are partly
+perpendicular to the field and partly in a field free region.</p>
+<div class="figurehere">
+<div class="center">
+<div class="float">
+<img src="Figures/amperianLoop.png" style="width:70mm" alt="image" />
+<div class="figcaption">image</div>
+</div>
+</div>
+</div>
+<p>The only contribution to <span class="math inline">\(\oint \B \cdot \d\s\)</span> from the loop is the side
+ab where, in this case, the field is parallel to the path. Since <span class="math inline">\(\B\)</span> is
+uniform along the path <span class="math inline">\(\oint \B \cdot \d\s = BL\)</span> where <span class="math inline">\(L\)</span> is the
+length of the path from a to b.</p>
+<p>The total current enclosed by the loop is the number of turns per unit
+length in the solenoid multiplied by the current, <span class="math inline">\(nIL\)</span>.
+<span class="math display">\[\begin{aligned}
+\therefore \oint \B \cdot \d\s = BL = \mu_0 nIL \\
+\therefore B = \mu_0 nI
+\end{aligned}\]</span></p>
+</div>
+</div>
+<div id="faradays-law-of-induction" class="section level2 hasAnchor" number="10.5">
+<h2><span class="header-section-number">10.5</span> Faraday’s Law of induction<a href="magnetic-fields.html#faradays-law-of-induction" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>A changing magnetic flux in a circuit will produce a current that
+opposes that change. Faraday’s Law of induction relates the induced EMF
+in a circuit to the rate of change of magnetic flux through a circuit.</p>
+<div class="figurehere">
+<div class="center">
+<div class="float">
+<img src="Figures/circuit_GR.png" style="width:70mm" alt="image" />
+<div class="figcaption">image</div>
+</div>
+</div>
+</div>
+<p>Consider the case of the circuit shown in that has a loop of wire.</p>
+<ul>
+<li><p>If the magnet is stationary: no current flows</p></li>
+<li><p>If the magnet moves towards the coil : current flows while the
+motion continues.</p></li>
+<li><p>If the magnet moves away from the coil : the current flows in
+opposite direction</p></li>
+<li><p>If a north pole is replaced by a south pole, then the current flow
+reverses in direction.</p></li>
+<li><p>If the magnet moves faster the current is increased.</p></li>
+</ul>
+<p>The induced current is a result of an induced electromotive force (emf),
+which depends on the rate of change of magnetic flux through the loop.
+We have already discussed electric flux in Gauss’ Law and we’re using
+the same idea here for Faraday’s Law of induction. The changing flux
+through the circuit could be due to a magnetic field produced by a
+second circuit.</p>
+<div class="figurehere">
+<div class="center">
+<div class="float">
+<img src="Figures/magFlux.png" style="width:70mm" alt="image" />
+<div class="figcaption">image</div>
+</div>
+</div>
+</div>
+<p>The magnetic flux through a surface is the component of the field
+perpendicular to the surface multiplied by the area of the surface.
+Mathematically</p>
+<p><span class="math display">\[\begin{aligned}
+\Phi_B = \int\B \cdot \d\s \\  
+\text{or} \; \Phi_B = \int \B \cos\theta \d s
+\end{aligned}\]</span></p>
+<p>where, as with Gauss’s Law, <span class="math inline">\(\d \s\)</span> is a vector perpendicular to the
+surface and with magnitude equal to the area of an element of the
+surface. We take the dot product to extract the component of <span class="math inline">\(\B\)</span>
+perpendicular to the surface. Magnetic flux is measured in Webers (Wb).
+You can see that this must be equivalent to T m<span class="math inline">\(^2\)</span> and, less obviously,
+Vs.</p>
+<p>Faraday’s Law states that the induced emf in a circuit is equal to the
+negative of the rate of change of flux through the circuit, written as</p>
+<p><span class="math display">\[\begin{aligned}
+V = - \frac{\d \Phi_B}{\d t}
+\end{aligned}\]</span></p>
+<p>If rather than a single loop of wire a coil has <span class="math inline">\(N\)</span> turns close together
+then the induced emf is simply multiplied by <span class="math inline">\(N\)</span>.</p>
+<div id="transformers" class="section level3 hasAnchor" number="10.5.1">
+<h3><span class="header-section-number">10.5.1</span> Transformers<a href="magnetic-fields.html#transformers" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>There are a number of devices that use inductance to useful effect.
+Transformers are one such device.</p>
+<div class="figurehere">
+<div class="center">
+<div class="float">
+<img src="Figures/transformers.png" style="width:70mm" alt="image" />
+<div class="figcaption">image</div>
+</div>
+</div>
+</div>
+<p>Transformers (see ) consist of two or more coils (usually with a
+ferromagnetic core) so that the field from one coil is coupled to the
+other coil. An AC voltage applied to the primary coil (<span class="math inline">\(V_1\)</span>) is
+transformed to a different voltage at the secondary coil (<span class="math inline">\(V_2\)</span>).</p>
+<p><span class="math display">\[\begin{aligned}
+\frac{V_2}{V_1} = \frac{N_2}{N_1}
+\end{aligned}\]</span></p>
+<p>where <span class="math inline">\(N_1\)</span> and <span class="math inline">\(N_2\)</span> are the number of turns in the primary and
+secondary coils, respectively.</p>
+<p>If <span class="math inline">\(N_2 &gt; N_1\)</span>, then the output voltage from the secondary coil can be
+much larger than the voltage in the primary coil and this can be used to
+produce very high voltages for example, for an extra high tension (EHT)
+supply. If <span class="math inline">\(N_2 &lt; N_1\)</span>, then the output voltage from the secondary coil
+is smaller but the output current can be very large for use in high
+current applications such as welding power supplies.</p>
+</div>
+<div id="dynamo" class="section level3 hasAnchor" number="10.5.2">
+<h3><span class="header-section-number">10.5.2</span> Dynamo<a href="magnetic-fields.html#dynamo" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>A dynamo is a type of generator, where a generator refers to a device
+that turns mechanical motion into electrical energy.</p>
+<div class="figurehere">
+<div class="center">
+<div class="float">
+<img src="Figures/dynamo.png" style="width:70mm" alt="image" />
+<div class="figcaption">image</div>
+</div>
+</div>
+</div>
+<p>is taken from <a href="http://www.walter-fendt.de/html5/phen/generator_en.htm" class="uri">http://www.walter-fendt.de/html5/phen/generator_en.htm</a>,
+an app which allows you to simulate a generator by changing certain
+parameters.</p>
+<p>The dynamo functions as the opposite of a motor. In a motor a current
+applied to a coil in a magnetic field generates kinetic energy. In a
+dynamo the rotation of a coil in a magnetic field generates an
+alternating current.</p>
+</div>
+<div id="the-moving-coil-microphone" class="section level3 hasAnchor" number="10.5.3">
+<h3><span class="header-section-number">10.5.3</span> The moving coil microphone<a href="magnetic-fields.html#the-moving-coil-microphone" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div class="figurehere">
+<div class="center">
+<div class="float">
+<img src="Figures/coilMic.png" style="width:90mm" alt="image" />
+<div class="figcaption">image</div>
+</div>
+</div>
+</div>
+<p>In a moving coil microphone, movement of the diaphragm by sound entering
+the device cause the coil to move in the field of the magnet generating
+a varying current that can be amplified.</p>
+</div>
+<div id="sec:eddy" class="section level3 hasAnchor" number="10.5.4">
+<h3><span class="header-section-number">10.5.4</span> Eddy current heating<a href="magnetic-fields.html#sec:eddy" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Have a look at the image below. Passing a current through the thick
+copper coil induces currents in the sample in the centre of the coil
+which can heat very rapidly to very high temperatures.</p>
+<div class="figurehere">
+<div class="center">
+<p><img src="Figures/eddyCurHeat.jpg" style="width:70mm" alt="image" /> <span id="fig:eddyHeat" label="fig:eddyHeat"></span></p>
+</div>
+</div>
+</div>
+</div>
+<div id="lenzs-law" class="section level2 hasAnchor" number="10.6">
+<h2><span class="header-section-number">10.6</span> Lenz’s Law<a href="magnetic-fields.html#lenzs-law" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p><em>Recommended reading:</em> Tipler &amp; Mosca 28-3</p>
+<p>Lenz’s Law states that the induced emf and induced current are in such a
+direction as to oppose the change that induces them.</p>
+<div class="figurehere">
+<div class="center">
+<div class="float">
+<img src="Figures/movingMag.png" style="width:70mm" alt="image" />
+<div class="figcaption">image</div>
+</div>
+</div>
+</div>
+<p>Consider the bar magnet and current loop in . The motion of the N pole
+towards the loop induces a current which flows so as to induce a N pole
+closest to the magnet’s N pole, and hence repel it.</p>
+<p>Lenz’s Law can be used to work out the direction of the induced current
+(or the sign of the induced emf if the loop is not closed).</p>
+<p>Note that the agent causing the motion, in this case the magnet,
+experiences a resisting force and so work is done. This work is equal to
+the internal energy produced in the coil by the current flow.</p>
+<p>(It is interesting to consider what would happen if instead of opposing
+the motion, the resulting current actually assisted it. In that case the
+motion of a N pole towards a loop would induce a S pole in the loop.
+This S pole would attract the N pole producing an acceleration that
+would in turn produce a larger current and hence a larger attraction
+etc. etc. This would violate the Principle of Conservation of Energy.</p>
+<p>In short, Lenz’s Law is associated with opposing <strong>change</strong>. Another way
+of interpreting it is to consider that the current will flow in such a
+way as to oppose the change in magnetic field through the loop. When the
+magnetic flux through a large conductor changes, eddy currents are
+induced. These currents produce the heating shown in the inductive
+heater at the end of .</p>
+</div>
+<div id="inductance" class="section level2 hasAnchor" number="10.7">
+<h2><span class="header-section-number">10.7</span> Inductance<a href="magnetic-fields.html#inductance" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p><em>Recommended reading:</em> Tipler &amp; Mosca 28-6</p>
+<p>We have considered the case of an emf induced in a loop by a changing
+flux resulting from a changing current in another loop. However, such an
+emf can be induced by a changing flux through a coil brought about by a
+changing current in the <strong>same</strong> coil. This is known as the
+self-inductance, or more commonly just the <strong>inductance</strong> of the coil,
+and is usually represented by the symbol <span class="math inline">\(L\)</span>. The SI unit of inductance
+is the Henry, equivalent to kg m<span class="math inline">\(^2\)</span> s<span class="math inline">\(^{-2}\)</span> A<span class="math inline">\(^{-2}\)</span>.</p>
+<p>The inductance relates the induced emf to the rate of change of current
+for a particular coil. So the voltage across an ideal inductor is given
+by <span class="math inline">\(V = -L \frac{\d I}{\d t}\)</span>. An ideal inductor has zero resistance,
+and we would treat a real inductor as a combination of a resistor and
+inductor in series.</p>
+<p>The inductance of a solenoid is given by <span class="math display">\[L = \frac{\mu_0 n^2 A}{l}\]</span></p>
+<p>Note that this result depends only on the geometry of the coil and not
+on the voltage or the current. If the coil is filled with a magnetic
+material such as iron, the inductance, can be increased by a factor of
+<span class="math inline">\(10^3\)</span> – <span class="math inline">\(10^4\)</span>.</p>
+<p>In the next section of this course, we’ll look at electrical circuits
+that include resistance, capacitance and inductance and in particular at
+their response to alternating voltages.</p>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="electric-fields.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="circuits.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/USERNAME/REPO/edit/BRANCH/FieldNotesMarkdown.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["_main.pdf", "_main.epub"],
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>
